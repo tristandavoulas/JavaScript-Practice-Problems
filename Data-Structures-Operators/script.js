@@ -67,12 +67,24 @@ const game = {
     },
   };
 
+  // Variables needed for functions // 
   const [players1, players2] = game.players;
   const [bayernGk, ...bayernFieldPlayers] = players1;
-
   const allPlayers = [...players1, ...players2];
-
   const players1final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
-
   const { odds : { team1, team2, x: draw} } = game;
   
+  // Function for pt. 6
+  function printGoals (...players) {
+    console.log(players);
+    console.log(`${players.length} goals were scored.`);
+  };
+
+  // Test the printGoals(x) function //
+  //    printGoals(...game.scored);
+  //    printGoals(...['Davies', 'Muller', 'Lewandowski', 'Kimmich']);
+
+  // Part 7 - Print which team is more likely to win w/o using if/else or ternary
+  // Let's use || operator
+  team1 < team2 && console.log(`Team 1 is likely to win!`);
+  team2 < team1 && console.log('Team 2 is likely to win!');
