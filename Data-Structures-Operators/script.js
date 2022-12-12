@@ -67,4 +67,9 @@ const game = {
     },
   };
 
+  const [players1, players2] = game.players;
+  const [bayernGk, ...bayernFieldPlayers] = players1;
+
+  const allPlayers = [...players1, ...players2];
+  console.log(allPlayers);
   
