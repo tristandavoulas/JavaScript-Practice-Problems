@@ -71,5 +71,8 @@ const game = {
   const [bayernGk, ...bayernFieldPlayers] = players1;
 
   const allPlayers = [...players1, ...players2];
-  console.log(allPlayers);
+
+  const players1final = [...players1, 'Thiago', 'Coutinho', 'Perisic'];
+
+  const { odds : { team1, team2, x: draw} } = game;
   
