@@ -123,4 +123,14 @@ for (const [i, playerName] of game.scored.entries()) {
   console.log(`Goal ${i + 1}: ${playerName}`);
 }
 
+// Part 2 
+const odds = Object.values(game.odds);
+let average = 0;
+for (const odd of odds) average += odd;
+average /= odds.length;
+
+for (const [team, odd] of Object.entries(game.odds)) {
+  const currTeam = team === 'x' ? 'draw' : `victory for ${game[team]}`;
+  console.log(`Odd of ${currTeam} ${odd}`);
+}
 
