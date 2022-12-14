@@ -176,7 +176,7 @@ let events = [...new Set(gameEvents.values())];
 gameEvents.delete('64');
 
 // Part 3
-console.log(`An event happened, on average, every ${90 / gameEvents.size} minutes`);
+console.log(`An event happened, on average, every ${(90 / gameEvents.size).toFixed(1)} minutes`);
 
 // Part 4
 for (const [min, event] of gameEvents) {
